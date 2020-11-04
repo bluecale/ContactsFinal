@@ -21,6 +21,6 @@ public class GroupBean {
 	private long id;
 	
 	@OneToMany
-	private List<ContactBean> contacts;
+	private List<ContactBean> contatti;
 
 }
