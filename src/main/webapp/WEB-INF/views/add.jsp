@@ -11,11 +11,9 @@
 </style>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <meta charset="ISO-8859-1">
-<%@include file="header.html" %>
 <title>Insert title here</title>
 </head>
 <body>
-
 
 <div class="add_form">
 	<sf:form modelAttribute="contact" method="POST">
@@ -29,8 +27,6 @@
 	</div>
 	</sf:form>
 	<br>
-	<form action="contacts">
-	<input type="submit" value="Go to contacts">
 	</form>
 </div>
 </body>

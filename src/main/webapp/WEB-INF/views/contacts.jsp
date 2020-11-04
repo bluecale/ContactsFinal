@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
+<style type="text/css">
 
-${contacts}
+</style>
+<title>My Contacts</title>
+</head>
 
 <body>
 </body>

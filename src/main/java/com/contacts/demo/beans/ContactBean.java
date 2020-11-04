@@ -30,5 +30,6 @@ public class ContactBean {
 	private boolean fav;
 	
 	
-
+	
+	
 }
