@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 20px;
+	color: #FFFFFF;
+}
+
+.sidenav a {
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+}
+
+.float-container {
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+} 
+
+#icon{
+	width:20%;
+
+}
+
+#title{
+	width:80%;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.navbar-header {
+	font-size: 10em;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+</style>
+</head>
+<body>
+
+	<div class="sidenav">
+		<div class="float-container" id="navbar-header">
+
+			<div class="float-child" id="user-icon">
+				<i class="fa fa-user" style="color:Tomato"></i>
+			</div>
+
+			<div class="float-child" id="title">
+				ContactApp
+			</div>
+
+		</div>
+		<a href="#services">Services</a> <a href="#clients">Clients</a> <a
+			href="#contact">Contact</a>
+	</div>
+
+
+</body>
+</html>

@@ -13,8 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 @NoArgsConstructor
 @Entity
 // TODO: @Slf4j
-public class ContactBean {
 
+public class ContactBean {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
