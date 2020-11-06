@@ -12,7 +12,6 @@
 <title>My Contacts</title>
 </head>
 
-
 <c:out value="${contacts}"></c:out>
 
 <body>

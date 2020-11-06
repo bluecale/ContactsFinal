@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Fri Nov 06 10:23:10 CET 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-9cdd-e958-000001f1f9b0 
+Fri Nov 06 14:27:29 CET 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-9dbd-979b-000001e49dc0 
 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
 Loaded from file:/C:/Users/m_ej/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -12,9 +12,9 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Fri Nov 06 10:24:13 CET 2020:
-Shutting down instance a816c00e-0175-9cdd-e958-000001f1f9b0 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
-Fri Nov 06 10:24:14 CET 2020 Thread[Thread-20,5,main] Cleanup action starting
+Fri Nov 06 14:29:05 CET 2020:
+Shutting down instance a816c00e-0175-9dbd-979b-000001e49dc0 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
+Fri Nov 06 14:29:06 CET 2020 Thread[Thread-20,5,main] Cleanup action starting
 ERROR XBM0I: Directory database cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -34,7 +34,7 @@ ERROR XBM0I: Directory database cannot be removed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
-Fri Nov 06 10:24:14 CET 2020 Thread[Thread-20,5,main] Cleanup action starting
+Fri Nov 06 14:29:06 CET 2020 Thread[Thread-20,5,main] Cleanup action starting
 ERROR XBM0I: Directory database cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -55,8 +55,8 @@ ERROR XBM0I: Directory database cannot be removed.
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
 ----------------------------------------------------------------
-Fri Nov 06 10:24:14 CET 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 81260031-0175-9cdd-e958-000001f1f9b0 
+Fri Nov 06 14:29:06 CET 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 906400e0-0175-9dbd-979b-000001e49dc0 
 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
 Loaded from file:/C:/Users/m_ej/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -68,9 +68,9 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Fri Nov 06 10:24:37 CET 2020:
-Shutting down instance 81260031-0175-9cdd-e958-000001f1f9b0 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
-Fri Nov 06 10:24:38 CET 2020 Thread[Thread-36,5,main] Cleanup action starting
+Fri Nov 06 14:29:47 CET 2020:
+Shutting down instance 906400e0-0175-9dbd-979b-000001e49dc0 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
+Fri Nov 06 14:29:48 CET 2020 Thread[Thread-36,5,main] Cleanup action starting
 ERROR XBM0I: Directory database cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -90,7 +90,7 @@ ERROR XBM0I: Directory database cannot be removed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
-Fri Nov 06 10:24:38 CET 2020 Thread[Thread-36,5,main] Cleanup action starting
+Fri Nov 06 14:29:48 CET 2020 Thread[Thread-36,5,main] Cleanup action starting
 ERROR XBM0I: Directory database cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -111,8 +111,120 @@ ERROR XBM0I: Directory database cannot be removed.
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
 ----------------------------------------------------------------
-Fri Nov 06 10:24:38 CET 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 0b3e4052-0175-9cdd-e958-000001f1f9b0 
+Fri Nov 06 14:29:48 CET 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance e66540fa-0175-9dbd-979b-000001e49dc0 
+on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
+Loaded from file:/C:/Users/m_ej/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=14.0.2+12-46
+user.dir=C:\Users\m_ej\Desktop\ContactsApp-2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Nov 06 14:30:46 CET 2020:
+Shutting down instance e66540fa-0175-9dbd-979b-000001e49dc0 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
+Fri Nov 06 14:30:47 CET 2020 Thread[Thread-52,5,main] Cleanup action starting
+ERROR XBM0I: Directory database cannot be removed.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Cleanup action completed
+Fri Nov 06 14:30:47 CET 2020 Thread[Thread-52,5,main] Cleanup action starting
+ERROR XBM0I: Directory database cannot be removed.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Cleanup action completed
+----------------------------------------------------------------
+Fri Nov 06 14:30:47 CET 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 22290109-0175-9dbd-979b-000001e49dc0 
+on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
+Loaded from file:/C:/Users/m_ej/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=14.0.2+12-46
+user.dir=C:\Users\m_ej\Desktop\ContactsApp-2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Nov 06 14:31:17 CET 2020:
+Shutting down instance 22290109-0175-9dbd-979b-000001e49dc0 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
+Fri Nov 06 14:31:18 CET 2020 Thread[Thread-68,5,main] Cleanup action starting
+ERROR XBM0I: Directory database cannot be removed.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Cleanup action completed
+Fri Nov 06 14:31:18 CET 2020 Thread[Thread-68,5,main] Cleanup action starting
+ERROR XBM0I: Directory database cannot be removed.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Cleanup action completed
+----------------------------------------------------------------
+Fri Nov 06 14:31:18 CET 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance de250118-0175-9dbd-979b-000001e49dc0 
 on database directory C:\Users\m_ej\Desktop\ContactsApp-2\database with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5387f9e0 
 Loaded from file:/C:/Users/m_ej/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
