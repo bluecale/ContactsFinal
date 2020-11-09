@@ -85,6 +85,7 @@ public class GroupsController {
 		groupsDao.save(group);
 		System.out.println(group);
 		List<ContactBean> contactsToAdd = (List<ContactBean>) model.getAttribute("added");
+		
 		for (ContactBean bean: contactsToAdd) {
 			ContactGroupRelationBean contactRelation = new ContactGroupRelationBean();
 			contactRelation.setContactId(String.valueOf(bean.getId()));

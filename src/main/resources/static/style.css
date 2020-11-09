@@ -3,13 +3,13 @@
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-
 }
 
+/*Navigation Bar */
 .topnav {
 	overflow: hidden;
 	background-color: #247ba0;
-	height:10%;
+	height: 10%;
 }
 
 .topnav a {
@@ -24,7 +24,7 @@ body {
 .topnav a:hover {
 	background-color: #cbf3f0;
 	color: black;
-	border-radius:100px;
+	border-radius: 100px;
 }
 
 .topnav a.active {
@@ -36,7 +36,7 @@ body {
 	padding-top: 25px;
 	text-align: center;
 	height: 45em;
-	background-color: #f8edeb;	
+	background-color: #f8edeb;
 }
 
 .form-wrapper {
@@ -48,29 +48,22 @@ body {
 	right: 30%;
 	background-color: #cbf3f0;
 	border-radius: 10px;
-
 }
 
-.contact-form{
-	padding-top:2%;
-	padding-bottom:5%;
-
+.contact-form {
+	padding-top: 2%;
+	padding-bottom: 5%;
 }
 
-.button-layout{
-	padding-top:10px;
-	color: tomato;
-	
-}
 
-.form-button{
-	font-size:20px;
+.form-button {
+	font-size: 20px;
 	margin: 5px;
-	width:50px;
-	background-color:white;
+	width: 50px;
+	background-color: white;
 }
 
-.form-button:hover{
+.form-button:hover {
 	background-color: grey;
 }
 
@@ -83,32 +76,31 @@ body {
 }
 
 input {
-	border-radius:15px;
+	border-radius: 15px;
 	padding: 7px;
-	padding-left:15px;
+	padding-left: 15px;
 	border-style: hidden;
-
 }
 
-input:focus{
+input:focus {
 	outline: 0px;
-
 }
 
-.form-button{
-	border-radius:5px;
+.form-button {
+	border-radius: 5px;
 	border-style: hidden;
-	margin:15px;
-}body {
+	margin: 15px;
+}
+
+body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .topnav {
 	overflow: hidden;
 	background-color: #247ba0;
-	height:10%;
+	height: 10%;
 }
 
 .topnav a {
@@ -123,7 +115,7 @@ input:focus{
 .topnav a:hover {
 	background-color: #cbf3f0;
 	color: black;
-	border-radius:100px;
+	border-radius: 100px;
 }
 
 .topnav a.active {
@@ -134,8 +126,10 @@ input:focus{
 .content {
 	padding-top: 25px;
 	text-align: center;
+	display: flex;
+	justify-content: center; height : 45em;
+	background-color: #f8edeb;
 	height: 45em;
-	background-color: #f8edeb;	
 }
 
 .form-wrapper {
@@ -147,55 +141,84 @@ input:focus{
 	right: 30%;
 	background-color: #cbf3f0;
 	border-radius: 10px;
-
 }
 
-.contact-form{
-	padding-top:2%;
-	padding-bottom:5%;
-
+.contact-form {
+	padding-top: 2%;
+	padding-bottom: 5%;
 }
 
-.button-layout{
-	padding-top:10px;
+.button-layout {
+	padding-top: 10px;
 	color: tomato;
-	
 }
 
-.form-button{
-	font-size:20px;
+.form-button {
+	font-size: 20px;
 	margin: 5px;
-	width:50px;
-	background-color:white;
+	width: 50px;
+	background-color: white;
 }
 
-.form-button:hover{
+.form-button:hover {
 	background-color: grey;
 }
 
 .list {
-	width: 80%;
+	width: 70%;
+	border-collapse: collapse;
 }
 
 .list tr:hover {
-	background-color: blue;
+	background-color: grey;
+}
+
+tr td {
+	vertical-align: center;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+tr {
+	padding-bottom: 7px;
+	vertical-align: center;
+	text-align: center;
+}
+
+tr:hover .table-button{
+	visibility: visible;
 }
 
 input {
-	border-radius:15px;
+	border-radius: 15px;
 	padding: 7px;
-	padding-left:15px;
+	padding-left: 15px;
 	border-style: hidden;
-
 }
 
-input:focus{
+input:focus {
 	outline: 0px;
-
 }
 
-.form-button{
-	border-radius:5px;
+.form-button {
+	border-radius: 5px;
 	border-style: hidden;
-	margin:15px;
+	margin: 10px;
+}
+
+.table-button {
+	float: left;
+	padding-left: 15px;
+	visibility:hidden;
+}
+
+.to-round-first {
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.to-round-last {
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 }

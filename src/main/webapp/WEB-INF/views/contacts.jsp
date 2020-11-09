@@ -14,7 +14,7 @@
 </head>
 
 <!-- Navigation bar -->
-<%@include file="navigation_bar.html" %>
+<%@include file="navigation_bar.html"%>
 <!-- Main content -->
 
 <div class="content">
@@ -25,11 +25,39 @@
 			<th>Number</th>
 		</tr>
 		<c:forEach items="${contacts}" var="contact">
-		<tr>
-			<td> ${contact.getName()} ${contact.getSurname()}</td>
-			<td> ${contact.getEmail()} </td>
-			<td> ${contact.getPhoneNum()} </td>
-		</tr>
+			<tr>
+				<td class="to-round-first">${contact.getName()}${contact.getSurname()}</td>
+				<td>${contact.getEmail()}</td>
+				<td>${contact.getPhoneNum()}</td>
+				<td class="to-round-last">
+					<div>
+						<div class="table-button">
+							<form action="/edit_contact" method="GET">
+								<input type="hidden" name="to_edit" value="${contact.getId()}">
+								<button type="submit">
+									<i class="fa fa-edit"></i>
+								</button>
+							</form>
+						</div>
+						<div class="table-button">
+							<form action="delete_contact" method="GET">
+								<input type="hidden" name="to_edit" value="${contact.getId()}">
+								<button type="submit">
+									<i class="fa fa-trash"></i>
+								</button>
+							</form>
+						</div>
+						<div class="table-button">
+							<form action="/star_contact" method="GET">
+								<input type="hidden" name="to_edit" value="${contact.getId()}">
+								<button type="submit">
+									<i class="fa fa-star"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				</td>
+			</tr>
 		</c:forEach>
 	</table>
 </div>
