@@ -38,6 +38,7 @@ public class ContactsController {
 		} else {
 			model.addAttribute("message", EMPTYFIELD);
 			}
+		
 		return "add";
 	}
 	

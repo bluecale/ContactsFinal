@@ -8,6 +8,8 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<%@include file="layout.html" %>
+
 <body>
 	<div class="to_add" style="background-color:tomato">
 		<c:forEach items="${sessionScope.toAdd}" var="contact" >

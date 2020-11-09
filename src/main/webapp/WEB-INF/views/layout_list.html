@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	height:30em;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;	
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.content {
+	padding-top:25px;
+	text-align: center;
+	height: 100%;
+	background-color: rgb(255, 121, 98);
+	height: 50em;
+	
+}
+.list{
+	width:80%;	
+}
+.list tr:hover{
+	background-color:blue;
+
+}
+
+</style>
+</head>
+<body>
+	<div class="topnav">
+		<a href="/add"><i class="fa fa-user-plus"></i> Add contact</a> <a
+			href="/contacts"><i class="fa fa-users"></i> Contats</a> <a
+			href="/groups_list"><i class="fa fa-users"></i> Contats</a> <a
+			href="/new_group"><i class="fa fa-users"></i> Contats</a>
+	</div>
+
+	<div class="content">
+		<table class="list">
+			<tr>
+				<th>Company</th>
+				<th>Contact</th>
+				<th>Country</th>
+			</tr>
+			<tr>
+				<td>Alfreds Futterkiste</td>
+				<td>Maria Anders</td>
+				<td>Germany</td>
+			</tr>
+			<tr>
+				<td>Centro comercial Moctezuma</td>
+				<td>Francisco Chang</td>
+				<td>Mexico</td>
+			</tr>
+			<tr>
+				<td>Ernst Handel</td>
+				<td>Roland Mendel</td>
+				<td>Austria</td>
+			</tr>
+			<tr>
+				<td>Island Trading</td>
+				<td>Helen Bennett</td>
+				<td>UK</td>
+			</tr>
+			<tr>
+				<td>Laughing Bacchus Winecellars</td>
+				<td>Yoshi Tannamuri</td>
+				<td>Canada</td>
+			</tr>
+			<tr>
+				<td>Magazzini Alimentari Riuniti</td>
+				<td>Giovanni Rovelli</td>
+				<td>Italy</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

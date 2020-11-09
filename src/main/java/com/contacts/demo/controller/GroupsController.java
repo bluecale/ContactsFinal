@@ -91,10 +91,7 @@ public class GroupsController {
 			System.out.println(contactRelation);
 			contactGroupRealationDao.save(contactRelation);
 		}
-		
-		
-		
-//		groupsDao.save(group);
+		groupsDao.save(group);
 		
 		status.setComplete();
 		
@@ -105,7 +102,6 @@ public class GroupsController {
 	public String listGroups(ModelMap model) {
 		List<ContactGroupRelationBean> relations = contactGroupRealationDao.findAll();
 		model.addAttribute("relations", relations);
-		System.out.println(contactGroupRealationDao.findAll());
 		
 		return "groupsList"; 
 	}

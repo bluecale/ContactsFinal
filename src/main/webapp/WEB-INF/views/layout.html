@@ -8,83 +8,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-	font-family: "Lato", sans-serif;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	height:30em;
 }
 
-.sidenav {
-	height: 100%;
-	width: 200px;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #111;
-	overflow-x: hidden;
-	padding-top: 20px;
-	color: #FFFFFF;
+.topnav {
+	overflow: hidden;
+	background-color: #333;
 }
 
-.sidenav a {
+.topnav a {
+	float: left;
+	color: #f2f2f2;	
+	text-align: center;
+	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
+	font-size: 17px;
 }
 
-.float-container {
-    padding: 20px;
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
 }
 
-.float-child {
-    width: 50%;
-    float: left;
-} 
+.topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
 
-#icon{
-	width:20%;
+.content {
+	padding-top:25px;
+	text-align: center;
+	height: 100%;
+	background-color: tomato;
+	height: 50em;
+	
+}
+.list{
+	width:80%;	
+}
+.list tr:hover{
+	background-color:blue;
 
 }
 
-#title{
-	width:80%;
-}
-
-.sidenav a:hover {
-	color: #f1f1f1;
-}
-
-.navbar-header {
-	font-size: 10em;
-}
-
-@media screen and (max-height: 450px) {
-	.sidenav {
-		padding-top: 15px;
-	}
-	.sidenav a {
-		font-size: 18px;
-	}
-}
 </style>
 </head>
 <body>
-
-	<div class="sidenav">
-		<div class="float-container" id="navbar-header">
-
-			<div class="float-child" id="user-icon">
-				<i class="fa fa-user" style="color:Tomato"></i>
-			</div>
-
-			<div class="float-child" id="title">
-				ContactApp
-			</div>
-
-		</div>
-		<a href="#services">Services</a> <a href="#clients">Clients</a> <a
-			href="#contact">Contact</a>
+	<div class="topnav">
+		<a href="/add"><i class="fa fa-user-plus"></i> Add contact</a> <a
+			href="/contacts"><i class="fa fa-users"></i> Contats</a> <a
+			href="/groups_list"><i class="fa fa-users"></i> Contats</a> <a
+			href="/new_group"><i class="fa fa-users"></i> Contats</a>
 	</div>
-
 
 </body>
 </html>

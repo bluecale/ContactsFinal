@@ -14,6 +14,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="layout.html" %>
 
 <div class="add_form">
 	<sf:form modelAttribute="contact" method="POST">

@@ -19,5 +19,4 @@ public class ContactGroupRelationBean {
 	
 	private String contactId;
 	private String groupId;
-	
 }
