@@ -82,16 +82,16 @@ public class GroupsController {
 	public String createGroup(ModelMap model, SessionStatus status, @RequestParam("groupName") String groupName) {
 		GroupBean group = new GroupBean();
 		group.setName(groupName);
+		groupsDao.save(group);
+		System.out.println(group);
 		List<ContactBean> contactsToAdd = (List<ContactBean>) model.getAttribute("added");
 		for (ContactBean bean: contactsToAdd) {
 			ContactGroupRelationBean contactRelation = new ContactGroupRelationBean();
-			System.out.println(bean.getId());
 			contactRelation.setContactId(String.valueOf(bean.getId()));
 			contactRelation.setGroupId(String.valueOf(group.getId()));
 			System.out.println(contactRelation);
 			contactGroupRealationDao.save(contactRelation);
 		}
-		groupsDao.save(group);
 		
 		status.setComplete();
 		
@@ -101,6 +101,8 @@ public class GroupsController {
 	@RequestMapping("/groups_list")
 	public String listGroups(ModelMap model) {
 		List<ContactGroupRelationBean> relations = contactGroupRealationDao.findAll();
+		List<GroupBean> groups = groupsDao.findAll();
+		model.addAttribute("groups", groups);
 		model.addAttribute("relations", relations);
 		
 		return "groupsList"; 
