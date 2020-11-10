@@ -71,10 +71,6 @@ body {
 	width: 80%;
 }
 
-.list tr:hover {
-	background-color: blue;
-}
-
 input {
 	border-radius: 15px;
 	padding: 7px;
@@ -169,7 +165,7 @@ body {
 	border-collapse: collapse;
 }
 
-.list tr:hover {
+.just-contacts:hover {
 	background-color: grey;
 }
 

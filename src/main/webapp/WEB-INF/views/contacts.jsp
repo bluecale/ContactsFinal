@@ -25,7 +25,7 @@
 			<th>Number</th>
 		</tr>
 		<c:forEach items="${contacts}" var="contact">
-			<tr>
+			<tr class="just-contacts">
 				<td class="to-round-first">${contact.getName()}${contact.getSurname()}</td>
 				<td>${contact.getEmail()}</td>
 				<td>${contact.getPhoneNum()}</td>

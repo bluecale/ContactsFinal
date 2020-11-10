@@ -2,6 +2,7 @@ package com.contacts.demo.controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,12 +25,13 @@ import com.contacts.demo.Dao.GroupsDao;
 import com.contacts.demo.beans.ContactBean;
 import com.contacts.demo.beans.ContactGroupRelationBean;
 import com.contacts.demo.beans.GroupBean;
+import com.contacts.demo.service.GroupService;
 
 @Controller
 @SessionAttributes(value = {"toAdd", "added"})
 public class GroupsController {
 	
-
+	private GroupService service = new GroupService();
 
 	@Autowired
 	ContactsDao contactsDao;
@@ -99,15 +101,12 @@ public class GroupsController {
 		return "addGroup";
 	}
 	
-	@RequestMapping("/groups_list")
-	public String listGroups(ModelMap model) {
-		List<ContactGroupRelationBean> relations = contactGroupRealationDao.findAll();
-		List<GroupBean> groups = groupsDao.findAll();
-		model.addAttribute("groups", groups);
-		model.addAttribute("relations", relations);
-		
-		return "groupsList"; 
-	}
+	 @RequestMapping("/groups_list")
+	 public String listGroups(ModelMap model) {
+	 HashMap<String, ArrayList<ContactBean>> groups = service.createGroupsMap();
+	 model.addAttribute("groups", groups);
+	 return "groupsList";
+	 }
 }
 
 

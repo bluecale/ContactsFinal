@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,13 +55,19 @@ public class ContactsController {
 		return "contacts";
 	}
 	
-	@RequestMapping(value = "/delete")
+	@GetMapping(value = "/delete_contact")
 	public String deleteContact(ModelMap model,  @RequestParam("to_edit") Long contactId) {
+		System.out.println(dao.findById((long) 1));
 		contactsService.deleteContact(contactId);
 		return "redirect:/contacts";
 		
 	}
 	
+//	@GetMapping(value="/starred")
+//	public String changeStarring(ModelMap model, @RequestParam("to_edit") Long contactId ) {
+//		
+//	}
+//	
 
 	
 }
