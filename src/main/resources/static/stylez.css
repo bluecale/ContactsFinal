@@ -1,11 +1,10 @@
 @charset "ISO-8859-1";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:ital,wght@1,300&display=swap');
-
 body {
 	margin: 0;
-	font-family: 'Nunito', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
 /*NAVIGATION BAR*/
 .topnav {
 	overflow: hidden;
@@ -25,12 +24,14 @@ body {
 .topnav a:hover {
 	background-color: #cbf3f0;
 	color: black;
+	border-radius: 100px;
 }
 
 .topnav a.active {
 	background-color: #4CAF50;
 	color: white;
 }
+/* ---------------------------------------------------------*/
 
 /* GENERAL CONTENT LAYOU */
 .content {
@@ -41,6 +42,7 @@ body {
 	display: block;
 	width: 100%;
 }
+/* ---------------------------------------------------------*/
 
 /* FORM LAYOUT */
 .form-wrapper {
@@ -69,16 +71,19 @@ body {
 .form-button:hover {
 	background-color: grey;
 }
+/* ---------------------------------------------------------*/
+.list-wrap {
+	width: 100%;
+	text-align: -webkit-center;
+	padding-top: inherit;
+}
 
-/*SEARCH BAR */
 .search-bar {
 	width: 30%;
 	padding-right: 50px;
 	height: 27px;
-	border-radius: 15px;
 	border-bottom-right-radius: 0px;
 	border-top-right-radius: 0px;
-	border-style: hidden;
 }
 
 .search-button {
@@ -87,8 +92,7 @@ body {
 	background: #247ba0;
 	color: white;
 	border: solid;
-	border-color: #247ba0;
-	width: 50px;
+	border-color: #247ba0; width : 50px;
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
 	width: 50px;
@@ -104,15 +108,39 @@ body {
 	outline: 0px;
 }
 
-/* TABLES LAYOUT */
-.list-wrap {
-	width: 100%;
-	text-align: -webkit-center;
-	padding-top: inherit;
+.list {
+	width: 80%;
+}
+
+.form-button {
+	border-radius: 5px;
+	border-style: hidden;
+	margin: 15px;
+}
+
+
+.contact-form {
+	padding-top: 2%;
+	padding-bottom: 5%;
+}
+
+.button-layout {
+	padding-top: 10px;
+	color: tomato;
+}
+
+.form-button {
+	font-size: 20px;
+	margin: 5px;
+	width: 50px;
+	background-color: white;
+}
+
+.form-button:hover {
+	background-color: grey;
 }
 
 .list {
-	width: 80%;
 	border-collapse: collapse;
 }
 
@@ -138,14 +166,38 @@ tr {
 	text-align: left;
 }
 
+tr:hover .table-button {
+	visibility: visible;
+}
+
+input {
+	border-radius: 15px;
+	padding-left: 15px;
+	border-style: hidden;
+}
+
+input:focus {
+	outline: 0px;
+}
+
+.form-button {
+	border-radius: 5px;
+	border-style: hidden;
+	margin: 10px;
+}
+
 .table-button {
 	float: left;
 	padding-left: 15px;
 	visibility: hidden;
 }
 
-tr:hover .table-button {
-	visibility: visible;
+/* Footer */
+footer {
+	text-align: center;
+	background-color: #247ba0;
+	color: white;
+	height: 3em;
 }
 
 .to-round-first {
@@ -160,12 +212,4 @@ tr:hover .table-button {
 
 .to-round-all {
 	border-radius: 10px;
-}
-
-/* FOOTER */
-footer {
-	text-align: center;
-	background-color: #247ba0;
-	color: white;
-	height: 3em;
 }

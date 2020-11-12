@@ -28,10 +28,8 @@ import com.contacts.demo.beans.GroupBean;
 import com.contacts.demo.service.GroupService;
 
 @Controller
-@SessionAttributes(value = {"toAdd", "added"})
+@SessionAttributes(value = { "toAdd", "added" })
 public class GroupsController {
-	
-	private GroupService service = new GroupService();
 
 	@Autowired
 	ContactsDao contactsDao;
@@ -42,16 +40,19 @@ public class GroupsController {
 	@Autowired
 	ContactGroupRelationDao contactGroupRealationDao;
 
-	
+	@Autowired
+	GroupService service;
+
 	@RequestMapping(value = "/new_group")
 	public String newGroup(ModelMap model) {
 		List<ContactBean> toAdd = contactsDao.findAll();
 		model.addAttribute("toAdd", toAdd);
-		model.addAttribute("added",  new ArrayList<ContactBean>());
+		model.addAttribute("added", new ArrayList<ContactBean>());
 		model.addAttribute("group", new GroupBean());
 		return "addGroup";
 
 	}
+
 	@SuppressWarnings("unchecked")
 	@GetMapping("/add_contact")
 	public String addContactToGroup(ModelMap model, @RequestParam("id") String id) {
@@ -60,12 +61,12 @@ public class GroupsController {
 		List<ContactBean> toAdd = (List<ContactBean>) model.getAttribute("toAdd");
 		added.add(contact.get());
 		toAdd.remove(contact.get());
-		model.addAttribute("added",  added);
-		model.addAttribute("toAdd",  toAdd);
+		model.addAttribute("added", added);
+		model.addAttribute("toAdd", toAdd);
 		return "addGroup";
-		
+
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@GetMapping("/remove_contact")
 	public String removeContactFromGroup(ModelMap model, @RequestParam("id") String id) {
@@ -74,11 +75,11 @@ public class GroupsController {
 		List<ContactBean> toAdd = (List<ContactBean>) model.getAttribute("toAdd");
 		added.remove(contact.get());
 		toAdd.add(contact.get());
-		model.addAttribute("added",  added);
-		model.addAttribute("toAdd",  toAdd);
-		return "addGroup";	
+		model.addAttribute("added", added);
+		model.addAttribute("toAdd", toAdd);
+		return "addGroup";
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@PostMapping("/create_group")
 	public String createGroup(ModelMap model, SessionStatus status, @RequestParam("groupName") String groupName) {
@@ -87,26 +88,30 @@ public class GroupsController {
 		groupsDao.save(group);
 		System.out.println(group);
 		List<ContactBean> contactsToAdd = (List<ContactBean>) model.getAttribute("added");
-		
-		for (ContactBean bean: contactsToAdd) {
+
+		for (ContactBean bean : contactsToAdd) {
 			ContactGroupRelationBean contactRelation = new ContactGroupRelationBean();
 			contactRelation.setContactId(String.valueOf(bean.getId()));
 			contactRelation.setGroupId(String.valueOf(group.getId()));
 			System.out.println(contactRelation);
 			contactGroupRealationDao.save(contactRelation);
 		}
-		
 		status.setComplete();
-		
 		return "addGroup";
 	}
-	
-	 @RequestMapping("/groups_list")
-	 public String listGroups(ModelMap model) {
-	 HashMap<String, ArrayList<ContactBean>> groups = service.createGroupsMap();
-	 model.addAttribute("groups", groups);
-	 return "groupsList";
-	 }
+
+	@RequestMapping("/groups_list")
+	public String listGroups(ModelMap model) {
+		HashMap<String, ArrayList<ContactBean>> groups = service.createGroupsMap();
+		model.addAttribute("groups", groups);
+		return "groupsList";
+	}
+
+	@GetMapping("/search_groups")
+	public String searchGroups(ModelMap model, @RequestParam("search") String groupSearch) {
+		HashMap<String, ArrayList<ContactBean>> groups = service.createGroupsMap(groupSearch);
+		model.addAttribute("groups", groups);
+		return "groupsList";
+
+	}
 }
-
-

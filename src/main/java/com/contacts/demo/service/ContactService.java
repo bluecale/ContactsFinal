@@ -4,8 +4,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -14,19 +15,22 @@ import com.contacts.demo.Dao.ContactsDao;
 import com.contacts.demo.Dao.GroupsDao;
 import com.contacts.demo.beans.ContactBean;
 import com.contacts.demo.beans.ContactGroupRelationBean;
+import com.contacts.demo.beans.GroupBean;
 
-@Configurable
 @Service
 public class ContactService {
 	
 	@Autowired
-	ContactsDao contactsDao;
+	private ContactsDao contactsDao;
 
 	@Autowired
-	ContactGroupRelationDao contactGroupRelationDao;
+	private ContactGroupRelationDao contactGroupRelationDao;
 
 	@Autowired
-	GroupsDao groupsDao;
+	private GroupsDao groupsDao;
+
+	
+	
 
 	public static boolean isValid(ContactBean bean) {
 		if (StringUtils.isEmpty(bean.getName())) {
@@ -34,10 +38,9 @@ public class ContactService {
 		}
 		return true;
 	}
-
+	
 	public void deleteContact(Long id) {
 		String idToString = String.valueOf(id);
-		System.out.println(contactsDao.findById((long) 1));
 		Set<String> affectedGroups = new HashSet<String>();
 		List<ContactGroupRelationBean> realtionsToDelete = contactGroupRelationDao.findByContactId(idToString);
 		System.out.println(realtionsToDelete);

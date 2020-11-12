@@ -22,11 +22,11 @@ public class ContactsController {
 	private final static String EMPTYFIELD =  "YOU ARE NOT ALLOWED TO HAVE NO NAME/SURENAME";
 
 	@Autowired
-	private ContactsDao dao;
+	private ContactsDao contactsDao;
 	
-	private ContactService contactsService = new ContactService();
-	
-	
+	@Autowired
+	private ContactService service;
+
 	@RequestMapping(value = "/add")
 	public String addForm(ModelMap model) { // HttpSession session
 		ContactBean contact = new ContactBean();
@@ -34,13 +34,11 @@ public class ContactsController {
 		return "add";
 	}
 
-	
-	
 	@PostMapping(value = "/add")
 	public String addContact(ModelMap model, @ModelAttribute("contact") ContactBean contact) { // HttpSession session
 		System.out.println(contact.toString());
 		if (ContactService.isValid(contact)) {
-			dao.save(contact);
+			contactsDao.save(contact);
 			return "redirect:/contacts";
 		} else {
 			model.addAttribute("message", EMPTYFIELD);
@@ -50,25 +48,35 @@ public class ContactsController {
 	
 	@RequestMapping(value="/contacts")
 	public String showContacts(ModelMap model) {
-		List<ContactBean> contacts = dao.findAll();
+		List<ContactBean> contacts = contactsDao.findByFav(false);
+		List<ContactBean> starredContacts = contactsDao.findByFav(true);
 		model.addAttribute("contacts", contacts);
+		model.addAttribute("starred", starredContacts);
 		return "contacts";
 	}
-	
-	@GetMapping(value = "/delete_contact")
+
+	@RequestMapping(value = "/delete")
 	public String deleteContact(ModelMap model,  @RequestParam("to_edit") Long contactId) {
-		System.out.println(dao.findById((long) 1));
-		contactsService.deleteContact(contactId);
+		service.deleteContact(contactId);
 		return "redirect:/contacts";
 		
 	}
 	
-//	@GetMapping(value="/starred")
-//	public String changeStarring(ModelMap model, @RequestParam("to_edit") Long contactId ) {
-//		
-//	}
-//	
-
+	@GetMapping(value="/starred")
+	public String changeStarring(ModelMap model, @RequestParam("to_edit") Long contactId ) {
+		Optional<ContactBean> contact = contactsDao.findById(contactId);
+		boolean current_status = contact.get().isFav();
+		contact.get().setFav(current_status ? false : true);
+		contactsDao.save(contact.get());
+		return "redirect:/contacts";
+	}	
 	
+	@GetMapping(value="/search_contacts")
+	public String searchContacts(ModelMap model, @RequestParam("search") String search) {
+		List<ContactBean> contacts = contactsDao.findByNameContaining(search);
+		model.addAttribute("contacts", contacts);
+		return "contacts";
+	}
+
 }
 

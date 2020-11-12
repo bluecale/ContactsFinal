@@ -17,13 +17,15 @@ import com.contacts.demo.beans.GroupBean;
 
 @Service
 public class GroupService {
+
+	@Autowired
+	private ContactsDao contactsDao;
 	
 	@Autowired
-	ContactsDao contactsDao;
+	private GroupsDao groupsDao;
+	
 	@Autowired
-	GroupsDao groupsDao;
-	@Autowired
-	ContactGroupRelationDao contactGroupRealationDao;
+	private ContactGroupRelationDao contactGroupRealationDao;
 
 	public ArrayList<ContactBean> createContactsList(List<ContactGroupRelationBean> relations, GroupBean group) {
 		ArrayList<ContactBean> contacts = new ArrayList<ContactBean>();
@@ -35,13 +37,22 @@ public class GroupService {
 				}
 			}
 		}
-		System.out.println(contacts);
 		return contacts;
 	}
 
 	public HashMap<String, ArrayList<ContactBean>> createGroupsMap() {
 		List<ContactGroupRelationBean> relations = contactGroupRealationDao.findAll();
 		List<GroupBean> groupsbean = groupsDao.findAll();
+		HashMap<String, ArrayList<ContactBean>> groups = new HashMap<String, ArrayList<ContactBean>>();
+		for (GroupBean group : groupsbean) {
+			groups.put(group.getName(), createContactsList(relations, group));
+		}
+		return groups;
+	}
+
+	public HashMap<String, ArrayList<ContactBean>> createGroupsMap(String search) {
+		List<ContactGroupRelationBean> relations = contactGroupRealationDao.findAll();
+		List<GroupBean> groupsbean = groupsDao.findByNameContaining(search);
 		HashMap<String, ArrayList<ContactBean>> groups = new HashMap<String, ArrayList<ContactBean>>();
 		for (GroupBean group : groupsbean) {
 			groups.put(group.getName(), createContactsList(relations, group));

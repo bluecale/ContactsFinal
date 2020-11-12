@@ -28,9 +28,6 @@ public class ContactBean {
 	private String picPath;
 	private String notes;
 
-	private boolean fav;
-	
-	
-	
-	
+	private boolean fav = false;
+		
 }
