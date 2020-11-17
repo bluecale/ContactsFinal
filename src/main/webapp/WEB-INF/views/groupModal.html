@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<div class="modal fade" id="groupModal" role="dialog" data-keyboard="false"
+	data-backdrop="static">
+	<div class="modal-dialog modal-md vertical-align-center">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Add New Group</h4>
+			</div>
+			<div class="modal-body" style="text-align: -webkit-center;">
+				<form action="/create_group" method="POST" id="create-group-form">
+					<table class="form-table">
+						<tr>
+
+							<td><label for="groupName">Group Name</label><input
+								name="groupName" class="form-input"
+								type="text" id="groupName"></td>
+						</tr>
+						<tr>
+					</table>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons" style="padding-right: 40px">
+					<input type="submit" form="create-group-form"name="close" value="Close">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<input type="submit" form="create-group-form" name="save" value = "Save">
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<div class="modal fade" id="editModal" role="dialog" data-keyboard="false"
+	data-backdrop="static">
+	<div class="modal-dialog modal-md vertical-align-center">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Edit</h4>
+			</div>
+			<div class="modal-body" style="text-align: -webkit-center;">
+				<form action="/apply_changes" method="get" id="edit-form">
+					<table class="form-table">
+						<tr>
+							<td><a href="/change_image"><img class="profile-pic"
+									alt="${toEdit.getPicPath()}" src="${toEdit.getPicPath()}"></a></td>
+							<td><label for="name">Name</label><input name="name"
+								class="form-input" value="${toEdit.getName()}" type="text"
+								id="name"></td>
+							<td><label for="surname">Surname</label><input
+								name="surname" class="form-input" value="${toEdit.getSurname()}"
+								type="text" id="surname"></td>
+						</tr>
+						<tr>
+							<td class="form-icon"><i class="fa fa-envelope fa-lg"></i></td>
+							<td colspan="2"><label for="email">Email</label><input
+								class="form-input" name="email" value="${toEdit.getEmail()}"
+								type="text" id="email"></td>
+						</tr>
+						<tr>
+							<td class="form-icon"><i class="fa fa-phone fa-lg"></i></td>
+							<td colspan="2"><label for="phone">Phone</label><input
+								class="form-input" name="phone" value="${toEdit.getPhoneNum()}"
+								type="text" id="phone"></td>
+						</tr>
+						<tr>
+							<td class="form-icon"><i class="fa fa-building fa-lg"></i></td>
+							<td colspan="2"><label for="company">Company</label><input
+								class="form-input" name="company" value="${toEdit.getCompany()}"
+								type="tel" id="company"></td>
+						</tr>
+						<tr>
+							<td class="form-icon"><i class="fa fa-sticky-note fa-lg"></i></td>
+							<td colspan="2"><label for="notes">Notes</label><input
+								class="form-input" name="notes" value="${toEdit.getNotes()}"
+								type="text" id="notes"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons" style="padding-right: 40px">
+					<input type="submit" form="edit-form" name="close" value="Close">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<input type="submit" form="edit-form" name="save" value = "Save">
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>

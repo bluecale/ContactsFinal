@@ -25,7 +25,7 @@ public class ContactBean {
 	private String email;
 	private String phoneNum;
 	private String company;
-	private String picPath;
+	private String picPath = "/blank.png";
 	private String notes;
 
 	private boolean fav = false;

@@ -1,5 +1,8 @@
 package com.contacts.demo.service;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -56,4 +59,14 @@ public class ContactService {
 		}
 		contactsDao.deleteById(id);
 	}
+	
+	 public ArrayList<ContactBean> sortContactsByName(ArrayList<ContactBean> contacts) {
+		 Collections.sort(contacts, new Comparator<ContactBean>() {
+		 public int compare(final ContactBean object1, final ContactBean object2) {
+		 return object1.getName().toLowerCase().compareTo(object2.getName().toLowerCase());
+		 }
+		 });
+		 return contacts;
+
+		 }
 }

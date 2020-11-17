@@ -18,7 +18,7 @@
 <!-- Navigation bar -->
 <%@include file="navigation_bar.html"%>
 <!-- Main content -->
-<body>
+<body style="user-select: none;">
 
 	<div class="content">
 		<form action="/search_groups" method="GET">
@@ -29,10 +29,10 @@
 			</button>
 		</form>
 		<div class="list-wrap">
-			<table>
+			<table class="group_table center">
 				<c:forEach items="${groups.keySet()}" var="key">
 					<tr class="breakrow">
-						<th>${key}</th>
+						<th><span>+</span> ${key}</th>
 					</tr>
 					<c:forEach items="${groups.get(key)}" var="contact">
 						<tr class="just-contacts" style="display: none;">
@@ -49,7 +49,10 @@
 	<script>
 		$(document).ready(function() {
 			$('.breakrow').click(function() {
-				$(this).nextUntil('tr.breakrow').slideToggle(200);
+				$(this).nextUntil('tr.breakrow').slideToggle(50);
+				$(this).find('span').text(function(_, value) {
+					return value == '-' ? '+' : '-'
+				});
 			});
 		});
 	</script>

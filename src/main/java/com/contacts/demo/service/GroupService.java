@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import com.contacts.demo.Dao.ContactGroupRelationDao;
 import com.contacts.demo.Dao.ContactsDao;
@@ -40,6 +41,13 @@ public class GroupService {
 		return contacts;
 	}
 
+	public boolean isValid(GroupBean bean) {
+		if (StringUtils.isEmpty(bean.getName())) {
+			return false;
+		}
+		return true;
+	}
+	
 	public HashMap<String, ArrayList<ContactBean>> createGroupsMap() {
 		List<ContactGroupRelationBean> relations = contactGroupRealationDao.findAll();
 		List<GroupBean> groupsbean = groupsDao.findAll();

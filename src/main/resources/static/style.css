@@ -1,15 +1,27 @@
 @charset "ISO-8859-1";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:ital,wght@1,300&display=swap')
+	;
+	
+:root {
+	--secondary: #0075ff; /* 1a73e8 */
+	--content: white;
+	--hilight: lightgray;
+	--gray: gray;
+}
 
 body {
 	margin: 0;
 	font-family: 'Nunito', sans-serif;
+	user-select: none;
 }
 /*NAVIGATION BAR*/
 .topnav {
+	height: 20%;
+	width: 100%;
 	overflow: hidden;
-	background-color: #247ba0;
+	background-color: var(--secondary);
 	height: 10%;
 }
 
@@ -23,8 +35,8 @@ body {
 }
 
 .topnav a:hover {
-	background-color: #cbf3f0;
-	color: black;
+	background-color: #FFD166;
+	color: #161032;
 }
 
 .topnav a.active {
@@ -36,8 +48,8 @@ body {
 .content {
 	padding-top: 25px;
 	text-align: -webkit-center;;
-	background-color: #f8edeb;
-	height: 30em;
+	background-color: var(--content);
+	height: 40em;
 	display: block;
 	width: 100%;
 }
@@ -59,11 +71,19 @@ body {
 	padding-bottom: 5%;
 }
 
+.add-form {
+	width: 30%;
+	padding-right: 50px;
+	height: 27px;
+	border-radius: 15px;
+	border-style: hidden;
+}
+
 .form-button {
 	font-size: 20px;
 	margin: 5px;
 	width: 50px;
-	background-color: white;
+	background-color: lightgray;
 }
 
 .form-button:hover {
@@ -74,29 +94,31 @@ body {
 .search-bar {
 	width: 30%;
 	padding-right: 50px;
-	height: 27px;
+	height: 35px;
 	border-radius: 15px;
 	border-bottom-right-radius: 0px;
 	border-top-right-radius: 0px;
 	border-style: hidden;
+	background-color: var(--hilight);
+	outline: none;
+	padding-left: 9px;
 }
 
 .search-button {
 	margin-left: -40px;
-	height: 29px;
-	background: #247ba0;
+	height: 35px;
+	background: var(--hilight);
 	color: white;
 	border: solid;
-	border-color: #247ba0;
+	border-color: var(--hilight);
 	width: 50px;
-	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
-	width: 50px;
+	border-radius: 15px;
 }
 
 .search-button:hover {
-	background-color: grey;
-	border-color: grey;
+	background-color: var(--gray);
+	border-color: var(--gray);
+	color: white;
 	cursor: pointer;
 }
 
@@ -117,7 +139,7 @@ body {
 }
 
 .just-contacts:hover {
-	background-color: grey;
+	background-color: lightgray;
 }
 
 .list-head {
@@ -140,8 +162,9 @@ tr {
 
 .table-button {
 	float: left;
-	padding-left: 15px;
+	padding-left: 10px;
 	visibility: hidden;
+	background-color: lightgray;
 }
 
 tr:hover .table-button {
@@ -151,6 +174,7 @@ tr:hover .table-button {
 .to-round-first {
 	border-bottom-left-radius: 10px;
 	border-top-left-radius: 10px;
+	padding:5px;
 }
 
 .to-round-last {
@@ -165,7 +189,109 @@ tr:hover .table-button {
 /* FOOTER */
 footer {
 	text-align: center;
-	background-color: #247ba0;
+	background-color: var(--secondary);
 	color: white;
 	height: 3em;
+}
+
+/* MULTIPLE BUTTON */
+.multiple-button-first {
+	float: left;
+	padding-bottom: 5px;
+}
+
+.multiple-button {
+	float: left;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+button {
+	width: 30px;
+	color: grey;
+	background-color: lightgray;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	color: var(--secondary);
+}
+
+.mult-button {
+	background-color: var(--content);
+	color: var(--gray);
+}
+
+/* ANDREA */
+.breakrow {
+	cursor: pointer;
+	text-align: center;
+}
+
+.group_table {
+	padding: 7px;
+	text-align: center;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.n_group_icon {
+	float: left;
+	padding-left: 15px
+}
+
+.form-input {
+	width: -webkit-fill-available;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-width: thin;
+	outline: none;
+	font-weight:800;
+}
+
+.form-table {
+	border-collapse: separate;
+	border-spacing: 20px 5px;
+}
+
+.profile-pic {
+	width: 40px;
+}
+
+.form-icon {
+	text-align: center;
+	vertical-align: bottom;
+	padding-bottom: 8px;
+}
+
+label {
+	font-weight: 100;
+	font-size: smaller;
+	color: lightgray;
+}
+
+.modal-footer-buttons{
+	padding-right:40px;
+}
+
+.modal-footer-buttons input{
+	cursor: pointer;
+	font-weight: bold;
+	color: var(--secondary);
+	padding: 5px;
+	border-radius: 10px;
+	border:none;
+	background-color: white;
+	outline: none;
+}
+.modal-footer-buttons input:hover{
+	text-decoration: none;
+	background-color: #0075ff1c;
 }
